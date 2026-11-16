@@ -4,12 +4,15 @@ import qs.popups.settings
 
 SettingsPage {
     Section {
-        ChoiceRow {
-            path: "wallpaper.transition"
-            label: "Draw transitions"
-            hint: "Between two still wallpapers. Videos keep the plain change."
-            options: [{ value: "random", label: "On" }, { value: "none", label: "None" }]
-            keywords: "wallpaper animation contagion"
+        ActionRow {
+            readonly property bool chosen: Daemon.setting("wallpaper.transition", "") === "wallfx"
+
+            label: "Contagion"
+            hint: chosen ? "The wallpaper transition now. Change it under Appearance → Transition." : "Make it the wallpaper transition (Appearance → Transition). Videos keep a plain fade."
+            button: chosen ? "In use" : "Use it"
+            icon: Icons.wallpaper
+            keywords: "wallpaper animation transition"
+            onTriggered: Daemon.setSetting("wallpaper.transition", "wallfx")
         }
 
         NumberRow {

@@ -50,6 +50,12 @@ The map says when each cell flips: Dijkstra over a noise field from 6–12
 colonies, ranked so that the covered area grows evenly (`src/lib.rs`). The next
 map is always made ahead. `shell/contagion.frag` only reads it.
 
+## Using it
+
+Choose **Contagion** under Settings → Appearance → Transition (or press *Use
+it* on the plugin's own Settings page): the plugin adds it to that list
+through its plugin.json `choices`. Any other choice puts awww's transitions back.
+
 ## Settings
 
 | setting | default | |
@@ -57,8 +63,8 @@ map is always made ahead. `shell/contagion.frag` only reads it.
 | `wallfx.duration` | `1800` | length of a transition, in milliseconds |
 | `wallfx.glow` | `0.9` | how brightly the front burns, 0–1 |
 
-Fableland's own `wallpaper.transition` set to `none` turns transitions off,
-these included. Videos keep the plain change.
+`wallpaper.transition` is `"wallfx"` while Contagion is chosen. Videos, and a
+change the shell could not cover in time, get a plain fade.
 
 ## Methods
 

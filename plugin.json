@@ -12,6 +12,9 @@
   "readOnly": [
     "map"
   ],
+  "choices": {
+    "wallpaper.transition": [{ "value": "wallfx", "label": "Contagion" }]
+  },
   "shell": {
     "settings": "Settings.qml",
     "slots": { "overlay": "Transition.qml" }

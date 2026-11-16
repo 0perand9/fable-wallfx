@@ -119,9 +119,11 @@ Scope {
         from = to = mapPath = smoothPath = "";
     }
 
-    // While this exists, the daemon hands wallpaper changes over.
+    // While Contagion is the chosen transition (Settings → Appearance), the
+    // daemon hands wallpaper changes over.
     Want {
         topic: "wallpaper.transition"
+        active: Daemon.setting("wallpaper.transition", "") === "wallfx"
     }
 
     Connections {
