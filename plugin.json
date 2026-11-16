@@ -1,0 +1,19 @@
+{
+  "name": "wallfx",
+  "title": "Wallpaper transitions",
+  "short": "Transitions",
+  "icon": "󰸉",
+  "about": "A new wallpaper eats through the old one in pixel colonies (from Diego Malagrida's pocket-dots).",
+  "version": "1.0.0",
+  "settings": {
+    "duration": 1800,
+    "glow": 0.9
+  },
+  "readOnly": [
+    "map"
+  ],
+  "shell": {
+    "settings": "Settings.qml",
+    "slots": { "overlay": "Transition.qml" }
+  }
+}

@@ -1,0 +1,9 @@
+[package]
+name = "fable-wallfx"
+version = "1.0.0"
+edition.workspace = true
+description = "Fableland plugin: wallpaper transitions drawn by the shell"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+fable-plugin.workspace = true
